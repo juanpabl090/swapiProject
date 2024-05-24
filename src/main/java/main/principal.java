@@ -6,8 +6,8 @@ import models.Film;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class main {
-    public static void main(String[] args) throws IOException, InterruptedException {
+public class principal {
+    public static void main(String[] args) {
         FilmController film = new FilmController();
         Scanner scaner = new Scanner(System.in);
         int numberFilm;
