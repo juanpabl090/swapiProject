@@ -11,11 +11,8 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-import java.util.ArrayList;
-import java.util.List;
 
 public class FilmController {
-    List<Film> listaPeliculas = new ArrayList<>();
     Gson gson = new GsonBuilder()
             .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
             .setPrettyPrinting()
@@ -37,7 +34,7 @@ public class FilmController {
     }
 
     public void postFile(Film response) throws IOException {
-        FileWriter escritura = new FileWriter("Films.txt");
+        FileWriter escritura = new FileWriter("Films.json");
         escritura.write(gson.toJson(response));
         escritura.close();
     }
